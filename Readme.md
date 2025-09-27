@@ -5,17 +5,19 @@ This document contains solutions for the Neetcode 150 problems. I plan to cover 
 Given an integer array `nums`, return `true` if any value appears more than once, otherwise return `false`.
 
 # Day 2 - Anagrams
-Given two strings `s` and `t`, return `true` if they are anagrams of each other, otherwise return `false`.
+Given two strings "stringa" and "stringb", return `true` if they are anagrams of each other, otherwise return `false`.
 
-An anagram is a string that has the exact same characters as another string, but in a different order.
+Anagram : An anagram is a string that has the exact same characters as another string, but in a different order.
 
 Approaches used:
-* Hashmap
-* Sorting
+* Hashmap : adding in hashmap and comparing characterwise match of number of appearance
+* Sorting : sorting and then comparing equality
 
 # Day 3 - Two Sum
 Given an array and a target, find the indices of two elements whose sum equals the target.
 
 Approaches used:
 * Brute force
-* One-pass approach (using a dictionary)
+* One-pass approach : subtracting element from target and finding the resultant in hashmap.
+
+# Day 4 -   

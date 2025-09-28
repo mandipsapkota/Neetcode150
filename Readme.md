@@ -24,3 +24,10 @@ Approaches used:
 Given an array of strings strs, group all anagrams together into sublists. You may return the output in any order.
 
 An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+# Day5 - Top k frequent
+Given an integer array nums and an integer k, return the k most frequent elements within the array.
+
+The test cases are generated such that the answer is always unique.
+
+You may return the output in any order.

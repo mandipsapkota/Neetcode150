@@ -31,3 +31,6 @@ Given an integer array nums and an integer k, return the k most frequent element
 The test cases are generated such that the answer is always unique.
 
 You may return the output in any order.
+
+# Day 6 - Encode decode problem
+Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.

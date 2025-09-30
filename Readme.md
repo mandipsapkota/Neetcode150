@@ -34,3 +34,10 @@ You may return the output in any order.
 
 # Day 6 - Encode decode problem
 Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+
+# Day 7 - Product of Array except self
+Given an integer array nums, return an array output where output[i] is the product of all the elements of nums except nums[i].
+
+Each product is guaranteed to fit in a 32-bit integer.
+
+Follow-up: Could you solve it in (n) time without using the division operation?

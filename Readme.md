@@ -41,3 +41,14 @@ Given an integer array nums, return an array output where output[i] is the produ
 Each product is guaranteed to fit in a 32-bit integer.
 
 Follow-up: Could you solve it in (n) time without using the division operation?
+
+# Day 8 - Valid Sudoku Board
+You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the following rules are followed:
+
+- Each row must contain the digits 1-9 without duplicates.
+- Each column must contain the digits 1-9 without duplicates.
+- Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without duplicates.
+Return `true` if the Sudoku board is valid, otherwise return `false`
+
+Note: A board does not need to be full or be solvable to be valid.
+

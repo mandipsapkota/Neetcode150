@@ -51,4 +51,3 @@ You are given a 9 x 9 Sudoku board board. A Sudoku board is valid if the followi
 Return `true` if the Sudoku board is valid, otherwise return `false`
 
 Note: A board does not need to be full or be solvable to be valid.
-

@@ -35,7 +35,7 @@ class Solution2:
 
 # Checking 
 if __name__ == "__main__":
-    text = "I.. am' batman, namtab ma I?"
+    text = "I.. am' batman, namtab ma I? "
     solution = Solution2()
     result = solution.isPalindrome(text)
     print(result)

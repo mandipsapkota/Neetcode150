@@ -62,5 +62,3 @@ A consecutive sequence is a sequence of elements in which each element is exactl
 You must write an algorithm that runs in `O(n)` time.
 
 # Two pointer
-
-## Day 10 - Valid Palindrome

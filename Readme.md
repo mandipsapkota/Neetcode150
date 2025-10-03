@@ -62,3 +62,10 @@ A consecutive sequence is a sequence of elements in which each element is exactl
 You must write an algorithm that runs in `O(n)` time.
 
 # Two pointer
+
+## Day 10 - Valid Palindrome
+Given a string `s`, return `true` if it is a **palindrome**, otherwise return `false`.
+
+A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
+
+`Note`: Alphanumeric characters consist of letters `(A-Z, a-z)` and numbers `(0-9)`.

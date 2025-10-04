@@ -69,3 +69,12 @@ Given a string `s`, return `true` if it is a **palindrome**, otherwise return `f
 A palindrome is a string that reads the same forward and backward. It is also case-insensitive and ignores all non-alphanumeric characters.
 
 `Note`: Alphanumeric characters consist of letters `(A-Z, a-z)` and numbers `(0-9)`.
+
+## Day 11 - Two Sums II
+Given an array of integers numbers that is sorted in non-decreasing order.
+
+Return the indices **(1-indexed)** of two numbers, `[index1, index2]`, such that they add up to a given target number `target` and `index1 < index2`. Note that `index1` and `index2` cannot be equal, therefore you may not use the same element twice.
+
+There will always be **exactly one valid solution**.
+
+Your solution must use O(1) additional space.

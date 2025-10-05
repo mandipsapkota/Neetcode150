@@ -78,3 +78,9 @@ Return the indices **(1-indexed)** of two numbers, `[index1, index2]`, such that
 There will always be **exactly one valid solution**.
 
 Your solution must use O(1) additional space.
+
+## Day 12 - Three Sum 
+Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[k]]` where `nums[i] + nums[j] + nums[k] == 0`, and the indices `i`, `j`and `k` are all distinct.
+
+The output should not contain any duplicate triplets. You may return the output and the triplets in **any order**.
+

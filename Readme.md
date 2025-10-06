@@ -84,3 +84,7 @@ Given an integer array `nums`, return all the triplets `[nums[i], nums[j], nums[
 
 The output should not contain any duplicate triplets. You may return the output and the triplets in **any order**.
 
+## Day 13 - Container with most water
+You are given an integer array `heights` where `heights[i]` represents the height of the _i<sup>th_</sup> bar.
+
+You may choose any two bars to form a container. Return the _maximum_ amount of water a container can store.

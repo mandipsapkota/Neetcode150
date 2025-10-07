@@ -88,3 +88,8 @@ The output should not contain any duplicate triplets. You may return the output 
 You are given an integer array `heights` where `heights[i]` represents the height of the _i<sup>th_</sup> bar.
 
 You may choose any two bars to form a container. Return the _maximum_ amount of water a container can store.
+
+## Day 14 - Trapping Rain Water
+You’re given an array of non-negative integers `height`, where each `height[i]` denotes the height of a bar of width 1.  
+
+Find and return the maximum area of water that can be held between any two bars.

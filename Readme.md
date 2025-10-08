@@ -93,3 +93,10 @@ You may choose any two bars to form a container. Return the _maximum_ amount of 
 You’re given an array of non-negative integers `height`, where each `height[i]` denotes the height of a bar of width 1.  
 
 Find and return the maximum area of water that can be held between any two bars.
+
+## Day 15 - Best time to buy and sell stock
+You are given an integer array prices, where prices[i] represents the price of individual stock of Tensorletters on the i-th day.
+
+You can buy one Stock on a specific day and sell it on a later day.
+
+Return the maximum profit that can be obtained from a single buy-sell transaction. If no profitable trade is possible, return 0.

@@ -100,3 +100,6 @@ You are given an integer array prices, where prices[i] represents the price of i
 You can buy one Stock on a specific day and sell it on a later day.
 
 Return the maximum profit that can be obtained from a single buy-sell transaction. If no profitable trade is possible, return 0.
+
+## Day 16 - Longest Substring Without Repeating Characters
+Given a string s, find the length of the longest substring without duplicate characters.

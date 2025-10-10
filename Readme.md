@@ -103,3 +103,8 @@ Return the maximum profit that can be obtained from a single buy-sell transactio
 
 ## Day 16 - Longest Substring Without Repeating Characters
 Given a string s, find the length of the longest substring without duplicate characters.
+
+## Day 17 - Longest Repeating Character Replacement
+Given a string s made up of uppercase English letters and an integer k, you are allowed to change at most k characters in the string to any other uppercase letter.
+
+Task is to find the maximum possible length of a substring that can consist of the same character after performing up to k such replacements.

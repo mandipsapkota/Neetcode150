@@ -108,3 +108,7 @@ Given a string s, find the length of the longest substring without duplicate cha
 Given a string s made up of uppercase English letters and an integer k, you are allowed to change at most k characters in the string to any other uppercase letter.
 
 Task is to find the maximum possible length of a substring that can consist of the same character after performing up to k such replacements.
+
+## Day 18 - Permutation in String
+We are provided with two strings, s1 and s2.
+We need to determine whether any rearrangement of s1 appears as a consecutive substring within s2 and return True if such a substring exists; otherwise, return False.

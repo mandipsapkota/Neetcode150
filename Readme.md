@@ -112,3 +112,6 @@ Task is to find the maximum possible length of a substring that can consist of t
 ## Day 18 - Permutation in String
 We are provided with two strings, s1 and s2.
 We need to determine whether any rearrangement of s1 appears as a consecutive substring within s2 and return True if such a substring exists; otherwise, return False.
+
+## Day 19 - Minimum Window Substring
+Return the smallest substring of **s** that contains all characters of **t**, counting duplicates as well. If no such substring exists, return an empty string. You can assume there’s only one correct answer.

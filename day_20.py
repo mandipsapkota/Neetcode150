@@ -44,4 +44,4 @@ if __name__ == "__main__":
     solution = Solution()
     nums= [2,5,3,5,3,6,3,5,3,6,4]
     k = 3
-    print(solution.checkInclusion(nums,k))
+    print(solution.maxSlidingWindow(nums,k))

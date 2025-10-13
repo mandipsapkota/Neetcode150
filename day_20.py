@@ -1,4 +1,5 @@
 # BRUTE FORCE 
+from typing import List
 class BruteForceSolution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         l,r = 0,k

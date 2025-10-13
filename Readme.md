@@ -115,3 +115,12 @@ We need to determine whether any rearrangement of s1 appears as a consecutive su
 
 ## Day 19 - Minimum Window Substring
 Return the smallest substring of **s** that contains all characters of **t**, counting duplicates as well. If no such substring exists, return an empty string. You can assume there’s only one correct answer.
+
+## Day 20 - Sliding Window Maximum 
+You are given an array of integers nums and an integer k. A sliding window of size k moves from the left to the right of the array, shifting one position at a time.
+
+At each step, return the maximum value within the current window.
+
+*Approaches Used*
+- Brute Force
+- Deque

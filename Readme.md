@@ -124,3 +124,5 @@ At each step, return the maximum value within the current window.
 *Approaches Used*
 - Brute Force
 - Deque
+
+# Stack

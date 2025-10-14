@@ -126,3 +126,13 @@ At each step, return the maximum value within the current window.
 - Deque
 
 # Stack
+
+## Day 21 - Valid Parentheses
+You’re given a string s made up of '(', ')', '{', '}', '[', and ']'.
+
+The string is valid if:
+- Every opening bracket has a matching closing bracket of the same type.
+- Brackets close in the correct order.
+- No closing bracket appears without a corresponding opening bracket.
+
+Return `true` if the string is valid, otherwise `false`.

@@ -136,3 +136,18 @@ The string is valid if:
 - No closing bracket appears without a corresponding opening bracket.
 
 Return `true` if the string is valid, otherwise `false`.
+
+## Day 22 - Minimum Stack
+**Problem:**
+Design a stack that supports `push`, `pop`, `top`, and retrieving the **minimum element** — all in **O(1)** time.
+
+**Functions to implement:**
+
+* `push(val)` → add element
+* `pop()` → remove top
+* `top()` → return top
+* `getMin()` → return minimum
+
+**Hint:**
+Use an extra stack (`minStack`) to track the minimum so far.
+Each time you push a value, also push the smaller of (value, current min) into `minStack`.

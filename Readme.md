@@ -151,3 +151,38 @@ Design a stack that supports `push`, `pop`, `top`, and retrieving the **minimum 
 **Hint:**
 Use an extra stack (`minStack`) to track the minimum so far.
 Each time you push a value, also push the smaller of (value, current min) into `minStack`.
+
+## Day 23 - Evaluate Reverse Polish Notation
+Sure — here’s the **Reverse Polish Notation** (RPN) problem written in the same structured style:
+
+---
+
+## Day 23 - Evaluate Reverse Polish Notation
+
+**Problem:**
+You are given an array of strings `tokens` representing an **arithmetic expression** in **Reverse Polish Notation (RPN)**.
+Evaluate the expression and return the final result as an integer.
+
+**Rules:**
+
+* Valid operators are `+`, `-`, `*`, and `/`.
+* Each operand may be an integer or another expression.
+* Division between two integers should **truncate toward zero**.
+* The input is always valid and results in an integer.
+
+**Functions to implement:**
+
+* `evalRPN(tokens: List[str]) -> int` → returns the evaluated result
+
+**Hint:**
+Use a **stack** to store numbers.
+When you see an operator, pop the last two numbers, apply the operation, and push the result back.
+Continue until the stack has one element left — that’s your answer.
+
+**Example:**
+
+```python
+Input: tokens = ["2", "1", "+", "3", "*"]
+Output: 9
+# Explanation: ((2 + 1) * 3) = 9
+```

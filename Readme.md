@@ -186,3 +186,6 @@ Input: tokens = ["2", "1", "+", "3", "*"]
 Output: 9
 # Explanation: ((2 + 1) * 3) = 9
 ```
+
+## Day 24 - Generate Parenthesis
+You are given an integer n. Return all well-formed parentheses strings that you can generate with n pairs of parentheses.

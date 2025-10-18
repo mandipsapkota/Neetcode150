@@ -153,11 +153,6 @@ Use an extra stack (`minStack`) to track the minimum so far.
 Each time you push a value, also push the smaller of (value, current min) into `minStack`.
 
 ## Day 23 - Evaluate Reverse Polish Notation
-Sure — here’s the **Reverse Polish Notation** (RPN) problem written in the same structured style:
-
----
-
-## Day 23 - Evaluate Reverse Polish Notation
 
 **Problem:**
 You are given an array of strings `tokens` representing an **arithmetic expression** in **Reverse Polish Notation (RPN)**.
@@ -189,3 +184,39 @@ Output: 9
 
 ## Day 24 - Generate Parenthesis
 You are given an integer n. Return all well-formed parentheses strings that you can generate with n pairs of parentheses.
+
+Here’s a matching **README** for the **Daily Temperatures** problem in the same style:
+
+---
+
+## Day 25 - Daily Temperatures
+
+**Problem:**
+You are given an integer array `temperatures` where each element represents the daily temperature.
+Return an array `answer` such that `answer[i]` is the **number of days** you have to wait after the `iᵗʰ` day to get a **warmer temperature**.
+If there is no future day for which this is possible, set `answer[i] = 0`.
+
+**Functions to implement:**
+
+* `dailyTemperatures(temperatures: List[int]) -> List[int]` → returns an array representing the number of days to wait for a warmer temperature.
+
+**Hint:**
+Use a **monotonic decreasing stack** that stores indices of days.
+While the current temperature is higher than the temperature at the top index of the stack,
+pop the stack and calculate how many days it took to find a warmer one.
+
+**Example:**
+
+```python
+Input: temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+Output: [1, 1, 4, 2, 1, 1, 0, 0]
+# Explanation:
+# Day 1 → wait 1 day for 74
+# Day 2 → wait 1 day for 75
+# Day 3 → wait 4 days for 76
+# Day 7 → no warmer day ahead
+```
+
+**Key Insight:**
+Instead of checking all future days for each temperature (O(n²)),
+the **stack** helps us find the next warmer day in **O(n)** time.

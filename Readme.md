@@ -220,3 +220,50 @@ Output: [1, 1, 4, 2, 1, 1, 0, 0]
 **Key Insight:**
 Instead of checking all future days for each temperature (O(n²)),
 the **stack** helps us find the next warmer day in **O(n)** time.
+
+## Day 26 - Car Fleet
+
+**Problem:**
+There are `n` cars driving **toward the same destination** along a one-lane road.
+The destination is at position `target` (in miles), and each car `i` has:
+
+* A starting position `position[i]` (in miles from the start).
+* A constant speed `speed[i]` (in miles per hour).
+
+When a **faster car catches up** to a slower one before reaching the destination, they **form a fleet** — moving together at the slower car’s speed.
+You must return the **number of car fleets** that will arrive at the destination.
+
+**Functions to implement:**
+
+* `carFleet(target: int, position: List[int], speed: List[int]) -> int` → returns number of fleets
+
+**Hint:**
+
+1. Sort cars by their **starting position (descending)** — closer cars first.
+2. For each car, calculate the **time** it takes to reach the target:
+   `time = (target - position[i]) / speed[i]`
+3. Use a **stack** to compare times — if the current car’s time is **less than or equal** to the top of the stack, it **joins** the fleet ahead.
+   Otherwise, it forms a **new fleet**.
+
+**Example:**
+
+```python
+Input: target = 12, position = [10, 8, 0, 5, 3], speed = [2, 4, 1, 1, 3]
+Output: 3
+
+# Explanation:
+# Car A (10,2) → reaches in 1 hr
+# Car B (8,4)  → reaches in 1 hr
+# Car C (0,1), D (5,1), E (3,3)
+# C,D,E → merge into one fleet
+# So, total = 3 fleets.
+```
+
+**Intuition:**
+Think **from the car closest to the target backward**.
+Each car either:
+
+* **Joins** the fleet ahead if it can catch up before the target, or
+* **Forms** a new fleet if it can’t.
+
+That’s why the stack only grows when a new fleet is formed.

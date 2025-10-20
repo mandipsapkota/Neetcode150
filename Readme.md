@@ -221,49 +221,42 @@ Output: [1, 1, 4, 2, 1, 1, 0, 0]
 Instead of checking all future days for each temperature (O(n²)),
 the **stack** helps us find the next warmer day in **O(n)** time.
 
-## Day 26 - Car Fleet
+## Day 27 - Largest Rectangle in Histogram
 
 **Problem:**
-There are `n` cars driving **toward the same destination** along a one-lane road.
-The destination is at position `target` (in miles), and each car `i` has:
+You are given an array of integers `heights`, where `heights[i]` represents the **height of a bar** in a histogram.
+Each bar has a **width of 1**.
+Your task is to **return the area of the largest rectangle** that can be formed among these bars.
 
-* A starting position `position[i]` (in miles from the start).
-* A constant speed `speed[i]` (in miles per hour).
+**Function to implement:**
 
-When a **faster car catches up** to a slower one before reaching the destination, they **form a fleet** — moving together at the slower car’s speed.
-You must return the **number of car fleets** that will arrive at the destination.
-
-**Functions to implement:**
-
-* `carFleet(target: int, position: List[int], speed: List[int]) -> int` → returns number of fleets
+* `largestRectangleArea(heights: List[int]) -> int` → returns the area of the largest rectangle
 
 **Hint:**
 
-1. Sort cars by their **starting position (descending)** — closer cars first.
-2. For each car, calculate the **time** it takes to reach the target:
-   `time = (target - position[i]) / speed[i]`
-3. Use a **stack** to compare times — if the current car’s time is **less than or equal** to the top of the stack, it **joins** the fleet ahead.
-   Otherwise, it forms a **new fleet**.
+1. Use a **stack** to keep track of bars' indices.
+2. Bars in the stack should have **increasing heights**.
+3. When a smaller height appears, **pop** from the stack and calculate the rectangle area:
+
+   ```
+   height = heights[popped_index]
+   width = i - stack[-1] - 1   # if stack not empty
+   width = i                   # if stack empty
+   ```
+4. Continue until all bars are processed — don’t forget to clear remaining bars from the stack.
 
 **Example:**
 
 ```python
-Input: target = 12, position = [10, 8, 0, 5, 3], speed = [2, 4, 1, 1, 3]
-Output: 3
+Input: heights = [2,1,5,6,2,3]
+Output: 10
 
 # Explanation:
-# Car A (10,2) → reaches in 1 hr
-# Car B (8,4)  → reaches in 1 hr
-# Car C (0,1), D (5,1), E (3,3)
-# C,D,E → merge into one fleet
-# So, total = 3 fleets.
+# The rectangle formed by bars with height [5,6] has area 5*2 = 10.
 ```
 
 **Intuition:**
-Think **from the car closest to the target backward**.
-Each car either:
-
-* **Joins** the fleet ahead if it can catch up before the target, or
-* **Forms** a new fleet if it can’t.
-
-That’s why the stack only grows when a new fleet is formed.
+Think of the histogram as **building walls** of different heights.
+As you scan from left to right, the stack helps track where each wall **starts expanding**.
+When you hit a shorter bar, it means the previous taller walls **end here**, so you compute their possible rectangle areas.
+This ensures you efficiently find the **maximum area** using **O(n)** time.

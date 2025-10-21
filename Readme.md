@@ -260,3 +260,7 @@ Think of the histogram as **building walls** of different heights.
 As you scan from left to right, the stack helps track where each wall **starts expanding**.
 When you hit a shorter bar, it means the previous taller walls **end here**, so you compute their possible rectangle areas.
 This ensures you efficiently find the **maximum area** using **O(n)** time.
+
+# Binary Search
+
+## Day 28 - 

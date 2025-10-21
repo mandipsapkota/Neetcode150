@@ -263,4 +263,35 @@ This ensures you efficiently find the **maximum area** using **O(n)** time.
 
 # Binary Search
 
-## Day 28 - 
+## Day 28 - Binary Search Algorithm
+
+**Problem:**
+Given a **sorted array** `nums` and an integer `target`, return the **index** of `target` if found; otherwise, return `-1`.
+
+**Function to implement:**
+
+* `search(nums: List[int], target: int) -> int`
+
+**Hint:**
+
+1. Keep two pointers : `left` and `right`.
+2. Find the middle index:
+
+   ```python
+   mid = (left + right) // 2
+   ```
+3. Compare `nums[mid]` with `target` and **halve the search space** each time:
+
+   * If equal → return `mid`
+   * If smaller → move `left = mid + 1`
+   * If larger → move `right = mid - 1`
+
+**Example:**
+
+```python
+Input: nums = [-1,0,3,5,9,12], target = 9
+Output: 4
+```
+
+**Intuition:**
+Binary Search applies the **divide and conquer** principle — repeatedly splitting the array in half to narrow down the target’s position, achieving **O(log n)** efficiency.

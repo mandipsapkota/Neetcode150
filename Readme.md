@@ -295,3 +295,12 @@ Output: 4
 
 **Intuition:**
 Binary Search applies the **divide and conquer** principle — repeatedly splitting the array in half to narrow down the target’s position, achieving **O(log n)** efficiency.
+
+## Day 29 - Search a 2d Matrix
+You are given an m x n 2-D integer array matrix and an integer target.
+- Each row in matrix is sorted in non-decreasing order.
+- The first integer of every row is greater than the last integer of the previous row.
+Return true if target exists within matrix or false otherwise.
+
+**Intuition**
+Think of  implementing binary search to first search relevant row, and then search if a matching row is found. 

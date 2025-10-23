@@ -304,3 +304,16 @@ Return true if target exists within matrix or false otherwise.
 
 **Intuition**
 Think of  implementing binary search to first search relevant row, and then search if a matching row is found. 
+
+## Day 30 - Koko Eating Bananas
+
+**Problem:**
+You are given an array `piles`, where `piles[i]` represents the number of bananas in the *i-th* pile, and an integer `h` representing the total number of hours Koko has to eat all the bananas.
+Koko can choose an integer eating speed `k` (bananas per hour). Each hour, she chooses a pile and eats up to `k` bananas from it. If the pile has fewer than `k` bananas, she eats them all and doesn’t continue to another pile that hour.
+
+Your task is to find the **minimum integer speed `k`** such that Koko can eat all the bananas within `h` hours.
+
+**Intuition:**
+Use **binary search** on the range `[1, max(piles)]`.
+For each possible `k`, calculate the total hours Koko would take to finish all piles.
+If the total hours ≤ `h`, try a smaller speed; otherwise, increase `k`.

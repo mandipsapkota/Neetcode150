@@ -317,3 +317,8 @@ Your task is to find the **minimum integer speed `k`** such that Koko can eat al
 Use **binary search** on the range `[1, max(piles)]`.
 For each possible `k`, calculate the total hours Koko would take to finish all piles.
 If the total hours ≤ `h`, try a smaller speed; otherwise, increase `k`.
+
+## Day 31 - 
+
+**Intuition**
+Use binary search after figuring out if the index is in left portion or right portion of sorted array.

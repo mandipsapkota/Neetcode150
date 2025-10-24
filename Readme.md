@@ -318,7 +318,18 @@ Use **binary search** on the range `[1, max(piles)]`.
 For each possible `k`, calculate the total hours Koko would take to finish all piles.
 If the total hours ≤ `h`, try a smaller speed; otherwise, increase `k`.
 
-## Day 31 - 
+## Day 31 - Finding Minimum in Rotated Sorted Array
 
-**Intuition**
-Use binary search after figuring out if the index is in left portion or right portion of sorted array.
+**Problem:**
+You are given a rotated sorted array `nums` of unique integers. The array was originally sorted in ascending order but then rotated at an unknown pivot.  
+Your task is to find the **minimum element** in the array.
+
+**Intuition:**
+Use **binary search** to efficiently locate the minimum element:
+1. Check if the array is already sorted (i.e., `nums[left] < nums[right]`), in which case the first element is the minimum.
+2. Otherwise, use the middle index to determine whether the minimum lies in the left or right half:
+   - If `nums[mid] > nums[right]`, the minimum is in the right half.
+   - If `nums[mid] < nums[right]`, the minimum is in the left half.
+3. Narrow the search space until you find the minimum.
+
+This approach ensures an **O(log n)** time complexity.

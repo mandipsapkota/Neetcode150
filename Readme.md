@@ -327,9 +327,21 @@ Your task is to find the **minimum element** in the array.
 **Intuition:**
 Use **binary search** to efficiently locate the minimum element:
 1. Check if the array is already sorted (i.e., `nums[left] < nums[right]`), in which case the first element is the minimum.
-2. Otherwise, use the middle index to determine whether the minimum lies in the left or right half:
+2. Otherwise, use the middle index to determine whether the mitounimum lies in the left or right half:
    - If `nums[mid] > nums[right]`, the minimum is in the right half.
    - If `nums[mid] < nums[right]`, the minimum is in the left half.
 3. Narrow the search space until you find the minimum.
 
 This approach ensures an **O(log n)** time complexity.
+
+## Day 32 - Search in Rotated Sorted Array
+**Problem:**
+You are given a rotated sorted array `nums` of unique integers and an integer `target`. The array was originally sorted in ascending order but then rotated at an unknown pivot.  
+Your task is to find the index of `target` in `nums`. If `target` is not found, return `-1`. 
+
+**Intuition:**
+Use **binary search** to efficiently locate the target:
+1. Determine which half of the array is sorted.
+2. Check if the target lies within the sorted half:
+   - If it does, narrow the search to that half.         
+   - If it doesn’t, search in the other half.

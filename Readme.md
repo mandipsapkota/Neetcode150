@@ -345,3 +345,11 @@ Use **binary search** to efficiently locate the target:
 2. Check if the target lies within the sorted half:
    - If it does, narrow the search to that half.         
    - If it doesn’t, search in the other half.
+
+## Day 33 - Time Based Key-Value Store
+**Problem:**
+Design a time-based key-value store that can store multiple values for the same key at different timestamps and retrieve the value associated with a key at a specific timestamp.   
+**Intuition:**
+Use a **dictionary** to store keys and their corresponding values as a list of `(timestamp, value)` pairs.  
+For retrieval, use **binary search** to efficiently find the largest timestamp less than or equal to the given timestamp.  
+This ensures both insertion and retrieval operations are efficient, with retrieval taking **O(log n)** time for each query.

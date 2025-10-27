@@ -353,3 +353,13 @@ Design a time-based key-value store that can store multiple values for the same 
 Use a **dictionary** to store keys and their corresponding values as a list of `(timestamp, value)` pairs.  
 For retrieval, use **binary search** to efficiently find the largest timestamp less than or equal to the given timestamp.  
 This ensures both insertion and retrieval operations are efficient, with retrieval taking **O(log n)** time for each query.
+
+## Day 34 - Median of Two Sorted Arrays
+**Problem:**
+You are given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively. Your task is to find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+
+**Intuition:**
+Use **binary search** on the smaller array to partition both arrays into left and right halves such that:
+- All elements in the left halves are less than or equal to all elements in the right halves.
+- The left halves contain half of the total elements (or one more if the total is
+   odd).             

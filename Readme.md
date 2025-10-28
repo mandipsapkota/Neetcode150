@@ -363,3 +363,27 @@ Use **binary search** on the smaller array to partition both arrays into left an
 - All elements in the left halves are less than or equal to all elements in the right halves.
 - The left halves contain half of the total elements (or one more if the total is
    odd).             
+
+# Linked List Starts
+
+## Day 35 - Reverse Linked List
+
+**Problem:**
+Given the head of a singly linked list, reverse the list and return the new head.
+
+**Intuition 1: Iterative**
+Use three pointers: `prev`, `curr`, and `next`.
+- Initialize `prev = None` and `curr = head`.
+- While `curr` is not `None`:
+  - Store `curr.next` in `next`.
+  - Reverse the link by setting `curr.next = prev`.
+  - Move `prev` and `curr` one step forward.
+- When the loop ends, `prev` will be the new head of the reversed list.
+
+**Intuition 2: Recursive**
+Use recursion to reverse the list:
+- **Base case:** If `head` is `None` or `head.next` is `None`, return `head`.
+- Recursively reverse the rest of the list.
+- After the recursive call, set `head.next.next = head` and `head.next = None`.
+- Return the new head (the result of the recursive call).
+

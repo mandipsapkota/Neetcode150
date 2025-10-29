@@ -387,3 +387,10 @@ Use recursion to reverse the list:
 - After the recursive call, set `head.next.next = head` and `head.next = None`.
 - Return the new head (the result of the recursive call).
 
+## Day 36 - Merge Linked list
+Make a new sorted linked list by merging two sorted linked lists. New list should be made from nodes of old lists.
+
+**Approach**:
+- test the smalle value, and start the dummy node with smaller value.
+- then keep adding smaller value node to the next of dummy node, while also moving the pointer of that list forward.
+- finally return dummy.next

@@ -394,3 +394,23 @@ Make a new sorted linked list by merging two sorted linked lists. New list shoul
 - test the smalle value, and start the dummy node with smaller value.
 - then keep adding smaller value node to the next of dummy node, while also moving the pointer of that list forward.
 - finally return dummy.next
+
+## Day 37 - Linked List Cycle
+Given the head of a linked list, determine if the linked list has a cycle in it.
+
+**Intuition(hashset approach):**
+Note : this is not optimal approach, but easy to understand.
+- Initialize an empty hash set to store visited nodes.
+- Traverse the linked list starting from the head node.
+- For each node, check if it is already in the hash set:
+  - If it is, return `true` (cycle detected).
+  - If it is not, add the node to the hash set and continue to the next node.
+- If you reach the end of the list (`None`), return `false` (no cycle).
+
+**Intuition(tortroise hare approach):**
+
+Use two pointers, `slow` and `fast`.
+- Initialize both pointers to the head of the list.
+- Move `slow` one step at a time and `fast` two steps at a time.
+- If there is a cycle, the `fast` pointer will eventually meet the `slow` pointer.
+- If `fast` reaches the end of the list (`None`), then there is no cycle.

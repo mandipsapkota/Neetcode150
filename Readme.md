@@ -414,3 +414,36 @@ Use two pointers, `slow` and `fast`.
 - Move `slow` one step at a time and `fast` two steps at a time.
 - If there is a cycle, the `fast` pointer will eventually meet the `slow` pointer.
 - If `fast` reaches the end of the list (`None`), then there is no cycle.
+
+## Day 38 - Reorder Linked List 
+
+You are given the head of a singly linked list.
+
+The positions of a linked list of length `n` can initially be represented as:
+
+`[0, 1, 2, ..., n-1]`
+
+Reorder the nodes of the linked list to be in the following order:
+
+`[0, n-1, 1, n-2, 2, n-3, ...]`
+
+**Constraints**:
+- You may not modify the values in the list's nodes.
+- You must reorder the nodes themselves.
+
+**Approach**:
+- Use two pointers, `slow` and `fast`, both initialized to the head of the list.
+- Move `slow` one step at a time and `fast` two steps at a time.
+- Continue moving the pointers until `fast` reaches the end of the list or `slow` and `fast` meet.
+- If `slow` and `fast` meet, a cycle exists in the linked list.
+- If `fast` reaches the end (`None`), there is no cycle in the linked list.
+
+**Example**:
+```python
+Input: head = [1, 2, 3, 4]
+Output: [1, 4, 2, 3]
+```
+
+**Complexity**:
+- **Time Complexity:** O(n) — Traversing the list multiple times.
+- **Space Complexity:** O(1) — In-place reordering without extra space.

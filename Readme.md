@@ -449,3 +449,23 @@ Output: [1, 4, 2, 3]
 - Space Complexity: O(1) — In-place reordering without extra space.
 
 ## Day 39 - Remove Nth Node From End of List
+**Problem:**
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+**Approach:**
+1. Use a two-pointer technique:
+   - Initialize two pointers, `first` and `second`, both pointing to a dummy node before the head.
+   - Move the `first` pointer `n + 1` steps ahead to create a gap of `n` nodes between `first` and `second`.
+2. Move both pointers one step at a time until `first` reaches the end of the list.
+3. The `second` pointer will now be just before the node to be removed. Adjust the `next` pointer of `second` to skip the target node.
+4. Return the head of the modified list.
+
+**Example:**
+```python
+Input: head = [1, 2, 3, 4, 5], n = 2
+Output: [1, 2, 3, 5]
+```
+
+**Complexity:**
+- Time Complexity: O(n) - Single traversal of the list.
+- Space Complexity: O(1) - No extra space used.

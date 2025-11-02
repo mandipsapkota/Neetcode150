@@ -447,3 +447,5 @@ Output: [1, 4, 2, 3]
 **Complexity**:
 - Time Complexity: O(n) — Traversing the list multiple times.
 - Space Complexity: O(1) — In-place reordering without extra space.
+
+## Day 39 - Remove Nth Node From End of List

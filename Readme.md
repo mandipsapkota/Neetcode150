@@ -469,3 +469,17 @@ Output: [1, 2, 3, 5]
 **Complexity:**
 - Time Complexity: O(n) - Single traversal of the list.
 - Space Complexity: O(1) - No extra space used.
+
+## Day 40 - Copy Linked List with Random Pointer
+
+**Problem**
+Create a deep copy of a linked list where each node has an additional random pointer that can point to any node in the list or be null.
+
+**Solution**
+- Two pass apprach
+- In first pass, make nodes
+- In second class | Just like practical file. ||| is needed
+
+**Complexity:**
+- Time Complexity: O(n)
+- Space Complexity: O(1)

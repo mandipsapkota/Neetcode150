@@ -483,3 +483,20 @@ Create a deep copy of a linked list where each node has an additional random poi
 **Complexity:**
 - Time Complexity: O(n)
 - Space Complexity: O(1)
+
+
+## Day 41 - Two Sum in Linked List 
+
+**Problem:**
+You are given the heads of two sorted linked lists `list1` and `list2`, representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. 
+
+**Example**
+Input : list1 = [2,4,3], list2 = [5,6,4]
+Output : [7,0,8]
+
+**Approach:**
+- Initialize a dummy node to build the result linked list.
+- Use two pointers to traverse both linked lists.
+- Add corresponding digits along with any carry from the previous addition.
+- Create new nodes for the result linked list based on the sum.
+- Return the next node of the dummy node as the head of the result linked list.

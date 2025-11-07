@@ -500,3 +500,36 @@ Output : [7,0,8]
 - Add corresponding digits along with any carry from the previous addition.
 - Create new nodes for the result linked list based on the sum.
 - Return the next node of the dummy node as the head of the result linked list.
+
+## Day 42 - Find the Duplicate Number
+
+**Problem:**
+You are given an array of integers `nums` containing `n + 1` integers where each integer is in the range `[1, n]` inclusive.  
+There is only one repeated number in `nums`, return this repeated number.
+
+**Constraints:**
+- You must solve the problem without modifying the array `nums` and use only constant extra space.
+- Your solution should run in `O(n)` time complexity.
+
+**Approach 1: Floyd's Tortoise and Hare (Cycle Detection)**
+1. Treat the array as a linked list where the value at each index points to the next index.
+2. Use two pointers, `slow` and `fast`:
+   - Move `slow` one step at a time.
+   - Move `fast` two steps at a time.
+3. If there is a duplicate, the two pointers will eventually meet.
+4. To find the duplicate, reset one pointer to the start of the array and move both pointers one step at a time until they meet again.
+
+**Approach 2: Binary Search**
+1. Use binary search on the range `[1, n]` to find the duplicate.
+2. For each mid-point, count how many numbers in the array are less than or equal to `mid`.
+3. If the count is greater than `mid`, the duplicate is in the lower half; otherwise, it is in the upper half.
+
+**Example:**
+```python
+Input: nums = [3, 1, 3, 4, 2]
+Output: 3
+```
+
+**Complexity:**
+- Time Complexity: O(n) for Floyd's algorithm, O(n log n) for binary search.
+- Space Complexity: O(1).

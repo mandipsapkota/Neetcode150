@@ -533,3 +533,6 @@ Output: 3
 **Complexity:**
 - Time Complexity: O(n) for Floyd's algorithm, O(n log n) for binary search.
 - Space Complexity: O(1).
+
+# Binary Tree 
+

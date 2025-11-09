@@ -536,3 +536,27 @@ Output: 3
 
 # Binary Tree 
 
+## Day 46 - Invert Binary Tree
+
+**Problem:**
+Given the root of a binary tree, invert the tree, and return its root.
+**Example:**
+
+```python
+Input:
+   4
+   / \
+  2   7
+ / \ / \
+1  3 6  9
+
+Output:
+   4
+   / \
+  7   2
+ / \ / \
+9  6 3  1
+```
+
+**Approach:**
+For every node, recuursively swap children node.

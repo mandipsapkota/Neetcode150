@@ -560,3 +560,17 @@ Output:
 
 **Approach:**
 For every node, recuursively swap children node.
+
+
+## Day 53 - Level Order Traversal
+**Problem:**
+Given the root of a binary tree, return the level order traversal of its nodes' values.
+(ie, from left to right, level by level).
+
+**Approach:**
+- Use a queue to facilitate breadth-first traversal.
+- Start by enqueueing the root node.
+- While the queue is not empty, process nodes level by level:
+  - Determine the number of nodes at the current level.
+  - For each node at this level, dequeue it, record its value, and enqueue its children (if they exist).
+- Append the list of values for each level to the result list.

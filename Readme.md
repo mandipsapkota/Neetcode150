@@ -574,3 +574,13 @@ Given the root of a binary tree, return the level order traversal of its nodes' 
   - Determine the number of nodes at the current level.
   - For each node at this level, dequeue it, record its value, and enqueue its children (if they exist).
 - Append the list of values for each level to the result list.
+
+## Day 54 - Binary Tree Right Side View
+
+**Problem:**
+Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+
+**Approach:**
+- Use a queue to perform a level-order traversal (BFS) of the tree.
+- For each level, record the last node's value (the rightmost node).
+- Return the list of recorded values. 

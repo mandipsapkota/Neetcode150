@@ -584,3 +584,17 @@ Given the root of a binary tree, imagine yourself standing on the right side of 
 - Use a queue to perform a level-order traversal (BFS) of the tree.
 - For each level, record the last node's value (the rightmost node).
 - Return the list of recorded values. 
+
+## Day 55 - Count good nodes in binary tree
+
+**Problem:**
+Given the root of a binary tree, a node X in the tree is named **good** if in the path from root to X there are no nodes with a value greater than X. 
+Return the number of good nodes in the binary tree.
+
+**Approach:**
+- Use a depth-first search (DFS) approach to traverse the tree.
+- Maintain the maximum value encountered on the path from the root to the current node.
+- For each node, compare its value with the maximum value:
+  - If the node's value is greater than or equal to the maximum value, it is a good node. Increment the count and update the maximum value.
+- Recursively traverse the left and right subtrees, passing the updated maximum value.
+- Return the total count of good nodes.

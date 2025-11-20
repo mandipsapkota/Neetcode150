@@ -598,3 +598,20 @@ Return the number of good nodes in the binary tree.
   - If the node's value is greater than or equal to the maximum value, it is a good node. Increment the count and update the maximum value.
 - Recursively traverse the left and right subtrees, passing the updated maximum value.
 - Return the total count of good nodes.
+
+## Day 56 - Valid Binary Search Tree
+**Problem:**
+Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+Definition of a Valid BST:
+- The left subtree of a node contains only nodes with keys less than the node's key.
+- The right subtree of a node contains only nodes with keys greater than the node's key.
+- Both the left and right subtrees must also be binary search trees.
+
+**Approach:**
+- Use a recursive helper function that checks each node against a valid range (min and max values)
+- Start with the entire range of valid values (negative infinity to positive infinity).
+- For each node:
+  - Check if its value is within the valid range.
+  - Recursively check the left subtree with an updated max value (current node's value).
+  - Recursively check the right subtree with an updated min value (current node's value).
+- If all nodes satisfy the BST properties, return true; otherwise, return false.
